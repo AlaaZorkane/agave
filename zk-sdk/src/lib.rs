@@ -22,15 +22,15 @@
 pub mod encryption;
 pub mod errors;
 pub mod pod;
-mod range_proof;
-mod sigma_proofs;
+pub mod range_proof;
+pub mod sigma_proofs;
 #[cfg(not(target_os = "solana"))]
-mod transcript;
+pub mod transcript;
 pub mod zk_elgamal_proof_program;
 
 /// Byte length of a compressed Ristretto point or scalar in Curve255519
-const UNIT_LEN: usize = 32;
+pub const UNIT_LEN: usize = 32;
 /// Byte length of a compressed Ristretto point in Curve25519
-const RISTRETTO_POINT_LEN: usize = UNIT_LEN;
+pub const RISTRETTO_POINT_LEN: usize = UNIT_LEN;
 /// Byte length of a scalar in Curve25519
-const SCALAR_LEN: usize = UNIT_LEN;
+pub const SCALAR_LEN: usize = UNIT_LEN;
